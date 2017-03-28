@@ -8,7 +8,7 @@
     <!-- product details Modal -->
     <div class="modal fade" id="product_detail" role="dialog">
         <div class="modal-dialog">
-            <div class="modal-content product">
+            <div class="modal-content product" style="width: 150%">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Product</h4>
@@ -47,28 +47,23 @@
                                         </h5>
 
                                         <h5 class="sizes">Drug Class :
-                                            <span class="size" data-toggle="tooltip" title="small">this is demo this
-                                                is demo</span>
+                                            <span class="size" data-toggle="tooltip" title="small" id="product_drugs_class"></span>
                                         </h5>
 
                                         <h5 class="sizes">Brand Name :
-                                            <span class="size" data-toggle="tooltip" title="small">this is demo this
-                                                is demo</span>
+                                            <span class="size" data-toggle="tooltip" title="small" id="product_brand_name"></span>
                                         </h5>
 
                                         <h5 class="sizes">Contains :
-                                            <span class="size" data-toggle="tooltip" title="small">this is demo this
-                                                is demo</span>
+                                            <span class="size" data-toggle="tooltip" title="small" id="product_contain"></span>
                                         </h5>
 
                                         <h5 class="sizes">Dosage Form :
-                                            <span class="size" data-toggle="tooltip" title="small">this is demo this
-                                                is demo</span>
+                                            <span class="size" data-toggle="tooltip" title="small" id="product_dosage_form"></span>
                                         </h5>
 
                                         <h5 class="sizes">Manufacturer :
-                                            <span class="size" data-toggle="tooltip" title="small">this is demo this
-                                                is demo</span>
+                                            <span class="size" data-toggle="tooltip" title="small" id="product_manufacturer"></span>
                                         </h5>
 
 
@@ -110,7 +105,7 @@
                         </div>
                     </div>
                     <div class="panel-body">
-                        <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers" />
+                        <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Search .." />
                     </div>
                     <table class="table table-hover " id="product-table">
                         <thead>
@@ -132,7 +127,7 @@
                                 <td>{{$product->Brand_Name}}</td>
                                 <td>{{$product->Manufacturer}}</td>
                                 <td><button type="button" class="btn btn-default" data-toggle="modal"
-                                            data-target="#product_detail" onclick="alert('hi');">Details</button></td>
+                                            data-target="#product_detail" onclick="details_box('{{$product->id}}', '{{$product->Drugs_For}}', '{{$product->Drug_Class}}', '{{$product->Brand_Name}}', '{{$product->Contains}}', '{{$product->Dosage_Form}}', '{{$product->Manufacturer}}', '{{$product->Price}}')">Details</button></td>
                             </tr>
                         @endforeach
 
