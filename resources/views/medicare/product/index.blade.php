@@ -105,7 +105,7 @@
                         </div>
                     </div>
                     <div class="panel-body">
-                        <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Search .." />
+                        <input type="text" class="form-control" id="product_serach_input" data-action="filter" data-filters="#dev-table" placeholder="Search .." onkeypress="return runScript(event)" />
                     </div>
                     <table class="table table-hover " id="product-table">
                         <thead>
@@ -119,10 +119,14 @@
                         </thead>
                         <tbody>
 
+                        @php
+                            $count = 1;
+                        @endphp
+
                         @foreach($products as $product)
 
                             <tr>
-                                <td><a href="#">{{$product->id}}</a></td>
+                                <td><a href="#">{{$count++}}</a></td>
                                 <td>{{$product->Drugs_For}}</td>
                                 <td>{{$product->Brand_Name}}</td>
                                 <td>{{$product->Manufacturer}}</td>

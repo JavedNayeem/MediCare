@@ -1,26 +1,5 @@
 $(document).ready(function() {
 
-    var table = document.getElementsByTagName("table")[0];
-    var tbody = table.getElementsByTagName("tbody")[0];
-    tbody.onclick = function (e) {
-        e = e || window.event;
-        var data = [];
-        var target = e.srcElement || e.target;
-        while (target && target.nodeName !== "TR") {
-            target = target.parentNode;
-        }
-        if (target) {
-            var cells = target.getElementsByTagName("td");
-            for (var i = 0; i < cells.length; i++) {
-                data.push(cells[i].innerHTML);
-            }
-        }
-        alert(data);
-    };
-
-
-
-
 
 
 });
@@ -36,4 +15,15 @@ function details_box(id, drugs_for, drug_class, brand_name, contains, dosage_for
     $( "#product_manufacturer" ).text( manufacturer );
     $( "#product_price" ).text( price );
 
+}
+
+
+function runScript(e) {
+    if (e.keyCode == 13) {
+        var key = document.getElementById("product_serach_input");
+
+        if (key.value != "") {
+            window.location.replace("/product?search=" + key.value );
+        }
+    }
 }
