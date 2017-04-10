@@ -64,38 +64,8 @@
     <section class="header parallax home-parallax page" id="HOME">
         <h2></h2>
         <div class="section_overlay">
-            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">
-                            <img src="images/logo.png" alt="Logo">
-                        </a>
-                    </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <!-- NAV -->
-                            <li><a href="#HOME">HOME</a> </li>
-                            <li><a href="#ABOUT">ABOUT </a> </li>
-                            <li><a href="#FEATURES">FEATURES</a></li>
-                            <li><a href="#SCREENS">SCREENS</a> </li>
-                            <li><a href="#DOWNLOAD">DOWNLOAD </a> </li>
-                            <li><a href="#CONTACT">CONTACT </a> </li>
-                            <li><a href="/login">LOGIN </a> </li>
-                            <li><a href="/register">REGISTER</a> </li>
-                        </ul>
-                    </div>
-                    <!-- /.navbar-collapse -->
-                </div>
-                <!-- /.container- -->
-            </nav>
+
+            @include('medicare.partials.topmenu')
 
             <div class="container home-container">
                 <div class="row">
@@ -118,7 +88,7 @@
 
                             <div class="download-btn">
                             <!-- BUTTON -->
-                                <a class="btn home-btn wow fadeInLeft" href="#DOWNLOAD">Download</a>
+                                <a class="btn home-btn wow fadeInLeft" href="/login">Login</a>
                                 <a class="tuor btn wow fadeInRight" href="#ABOUT">Take a tour <i class="fa fa-angle-down"></i></a>
                             </div>
                         </div>
@@ -767,7 +737,7 @@
                     <div class="copy_right_text">
                     <!-- COPYRIGHT TEXT -->
                         <p>Copyright &copy; 2016. All Rights Reserved.</p>        
-                        <p>A theme by <a href="https://dcrazed.com/">Dcrazed</a></p>
+                        <p>A Creative Studio Project</p>
                     </div>
                      
                 </div>
