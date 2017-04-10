@@ -1,8 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.main-layout')
+
+@section('content-header', 'Product')
 
 @section('content')
 
-    <!-- Scripts -->
     <script src="/js/product.js"></script>
 
     <!-- product details Modal -->
@@ -92,64 +93,67 @@
     </div>
     <!-- end Modal -->
 
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Medicine</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
 
-    <div class="container">
-        <h1>Product </h1>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Medicine</h3>
-                        <div class="pull-right">
+            <div class="panel-body">
+                <input type="text" class="form-control" id="product_serach_input" data-action="filter" data-filters="#dev-table" placeholder="Search .." onkeypress="return runScript(event)" />
+            </div>
 
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <input type="text" class="form-control" id="product_serach_input" data-action="filter" data-filters="#dev-table" placeholder="Search .." onkeypress="return runScript(event)" />
-                    </div>
-                    <table class="table table-hover " id="product-table">
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Drugs For</th>
-                            <th>Brand Name</th>
-                            <th>Manufacturer</th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                        <tbody>
+            <table class="table table-hover " id="product-table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Drugs For</th>
+                    <th>Brand Name</th>
+                    <th>Manufacturer</th>
+                    <th></th>
+                </tr>
+                </thead>
 
-                        @php
-                            $count = 1;
-                        @endphp
+                <tbody>
 
-                        @foreach($products as $product)
+                @php
+                    $count = 1;
+                @endphp
 
-                            <tr>
-                                <td><a href="#">{{$count++}}</a></td>
-                                <td>{{$product->Drugs_For}}</td>
-                                <td>{{$product->Brand_Name}}</td>
-                                <td>{{$product->Manufacturer}}</td>
-                                <td><button type="button" class="btn btn-default" data-toggle="modal"
-                                            data-target="#product_detail" onclick="details_box('{{$product->id}}', '{{$product->Drugs_For}}', '{{$product->Drug_Class}}', '{{$product->Brand_Name}}', '{{$product->Contains}}', '{{$product->Dosage_Form}}', '{{$product->Manufacturer}}', '{{$product->Price}}')">Details</button></td>
-                            </tr>
-                        @endforeach
+                @foreach($products as $product)
 
+                    <tr>
+                        <td><a href="#">{{$count++}}</a></td>
+                        <td>{{$product->Drugs_For}}</td>
+                        <td>{{$product->Brand_Name}}</td>
+                        <td>{{$product->Manufacturer}}</td>
+                        <td><button type="button" class="btn btn-default" data-toggle="modal"
+                                    data-target="#product_detail" onclick="details_box('{{$product->id}}', '{{$product->Drugs_For}}', '{{$product->Drug_Class}}', '{{$product->Brand_Name}}', '{{$product->Contains}}', '{{$product->Dosage_Form}}', '{{$product->Manufacturer}}', '{{$product->Price}}')">Details</button></td>
+                    </tr>
+                @endforeach
 
-                        </tbody>
-                    </table>
+                </tbody>
+
+                <tfoot>
+                <tr>
+                    <th>#</th>
+                    <th>Drugs For</th>
+                    <th>Brand Name</th>
+                    <th>Manufacturer</th>
+                    <th></th>
+                </tr>
+                </tfoot>
+            </table>
+
+            <div class="">
+                <div class="col-lg-12 col-lg-offset-4">
+                    {{ $products->appends(Request::only('filter'))->links() }}
                 </div>
             </div>
 
         </div>
-
-
-        <div class="">
-            <div class="col-lg-12 col-lg-offset-4">
-                {{ $products->appends(Request::only('filter'))->links() }}
-            </div>
-        </div>
-
-
+        <!-- /.box-body -->
     </div>
+
 @endsection
