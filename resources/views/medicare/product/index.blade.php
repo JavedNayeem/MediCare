@@ -148,7 +148,7 @@
 
             <div class="">
                 <div class="col-lg-12 col-lg-offset-4">
-                    {{ $products->appends(Request::only('filter'))->links() }}
+                    {{ $products->appends(Request::only('filter', 'search'))->links() }}
                 </div>
             </div>
 
