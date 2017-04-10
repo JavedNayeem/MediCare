@@ -447,24 +447,19 @@
                                                                                           width="60" height="60" alt="APPS SCREEN" /></a>
                     </div>
                     <div class="item">
-                        <a href="/images/screens/iPhone05.png" rel="prettyPhoto[pp_gal]"><img src="/images/iPhone05
-                        .png" width="60" height="60" alt="APPS SCREEN" /></a>
+                        <a href="/images/screens/iPhone05.png" rel="prettyPhoto[pp_gal]"><img src="/images/iPhone05.png" width="60" height="60" alt="APPS SCREEN" /></a>
                     </div>
                     <div class="item">
-                        <a href="/images/screens/iPhone06.png" rel="prettyPhoto[pp_gal]"><img src="/images/iPhone06
-                        .png" width="60" height="60" alt="APPS SCREEN" /></a>
+                        <a href="/images/screens/iPhone06.png" rel="prettyPhoto[pp_gal]"><img src="/images/iPhone06.png" width="60" height="60" alt="APPS SCREEN" /></a>
                     </div>
                     <div class="item">
-                        <a href="/images/screens/iPhone07.png" rel="prettyPhoto[pp_gal]"><img src="/images/iPhone07
-                        .png" width="60" height="60" alt="APPS SCREEN" /></a>
+                        <a href="/images/screens/iPhone07.png" rel="prettyPhoto[pp_gal]"><img src="/images/iPhone07.png" width="60" height="60" alt="APPS SCREEN" /></a>
                     </div>
                     <div class="item">
-                        <a href="/images/screens/iPhone08.png" rel="prettyPhoto[pp_gal]"><img src="/images/iPhone08
-                        .png" width="60" height="60" alt="APPS SCREEN" /></a>
+                        <a href="/images/screens/iPhone08.png" rel="prettyPhoto[pp_gal]"><img src="/images/iPhone08.png" width="60" height="60" alt="APPS SCREEN" /></a>
                     </div>
                     <div class="item">
-                        <a href="/images/screens/iPhone09.png" rel="prettyPhoto[pp_gal]"><img src="/images/iPhone09
-                        .png" width="60" height="60" alt="APPS SCREEN" /></a>
+                        <a href="/images/screens/iPhone09.png" rel="prettyPhoto[pp_gal]"><img src="/images/iPhone09.png" width="60" height="60" alt="APPS SCREEN" /></a>
                     </div>
                 </div>
             </div>
