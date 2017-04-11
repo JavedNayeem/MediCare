@@ -22,15 +22,16 @@ Route::get('/test', function () {
     return view('medicare.test.test');
 });
 
-Route::get('/dashboard', function () {
-    //return view('welcome');
-    return view('medicare.dashboard.index');
-});
+
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/dashboard', function () {
+    return view('medicare.dashboard.index');
+});
 
 Route::get('/product', 'ProductController@index');
 
